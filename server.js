@@ -37,5 +37,18 @@ app.post('/register', (req, res) => {
   res.redirect('success');
 })
 
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+
+
+app.post('/login', (req, res) => {
+  res.redirect('user-page');
+})
+
+
+app.get('/user-page', (req, res) => {
+  res.render('user-page');
+})
 
 app.listen(3000);
